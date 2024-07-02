@@ -5,9 +5,7 @@
 -- https://gist.github.com/soulik/82e9d02a818ce12498d1
 -- Initial license was unspecified so I am assuming public domain
 
-local M = {}
-
-function M.get_os_name()
+return function()
     -- Return two strings describing the OS name and OS architecture.
     -- For Windows, the OS identification is based on environment variables
     -- On unix, a call to uname is used.
@@ -87,16 +85,5 @@ function M.get_os_name()
     end
     return os_name, arch_name
 end
-
-
--- heuristic for detecting standalone script
-if (... ~= 'get_os_name') then
-    -- main
-    print(("%q %q"):format(M.get_os_name()))
-end
-
-return M
-
-
 
 
