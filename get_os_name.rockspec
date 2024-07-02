@@ -10,13 +10,7 @@ description = {
   summary = "Get OS name and architecture",
 }
 build = {
-  modules = {
-    subprocess = {
-      sources = {
-        "get_os_name.lua"
-      },
-    },
-  },
+  copy_directories = {},
   type = "builtin",
 }
 dependencies = {
