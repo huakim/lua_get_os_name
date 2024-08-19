@@ -5,6 +5,7 @@
 -- https://gist.github.com/soulik/82e9d02a818ce12498d1
 -- Initial license was unspecified so I am assuming public domain
 
+--[[
 return function()
     -- Return two strings describing the OS name and OS architecture.
     -- For Windows, the OS identification is based on environment variables
@@ -87,3 +88,10 @@ return function()
 end
 
 
+]]
+
+local uname = require 'uname'
+return function()
+    local ret = uname.uname()
+    return ret.sysname, ret.machine
+end
