@@ -1,6 +1,6 @@
 
 package = 'get_os_name'
-version = '0.0.1-1'
+version = 'scm-1'
 source = {
   url = "git://github.com/huakim/lua_get_os_name.git",
  }
